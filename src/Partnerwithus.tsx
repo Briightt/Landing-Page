@@ -61,7 +61,7 @@ sm:min-w-160" variants = {variants}>
 
 {categories.map((category,index) => 
 <ul className="flex flex-col lg:items-start font-light p-1 text-white gap-3">
-<li key = {index} className="flex items-center sm:justify-between justify-around gap-5 text-[1.1rem] border-b leading-10 cursor-pointer w-full sm:max-w-130 sm:min-w-130 xl:max-w-110 xl:min-w-110 select-none 
+<li key = {index} className="flex items-center sm:justify-between justify-around gap-5 text-[1.1rem] border-b leading-10 cursor-pointer w-full sm:max-w-130 sm:min-w-130 xl:max-w-90 xl:min-w-90 select-none 
 transition-all ease-in-out duration-200 hover:opacity-70 "
  onClick={() => collpaseText(index)}><p className="flex items-center gap-5">{icons[index]}{category}</p>
 {collapseIndex === index ? <motion.span animate = {{rotate:180}} transition={{ease:'easeInOut', duration:0.3}} ><AiOutlineMinus className="transition-all ease-in-out duration-200 w-4 h-4"/></motion.span> : 
@@ -108,6 +108,7 @@ transition-all ease-in-out duration-200 hover:opacity-70 "
 
 
 }
+
 
 
 
