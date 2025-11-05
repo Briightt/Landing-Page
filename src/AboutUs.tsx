@@ -65,7 +65,7 @@ const hoverVariants = {
 
 const textVariants = {
   rest: { opacity: 0.65, scale: 1,},
-  hover: { opacity: 1, scale: 1.05,  transition:{type:"spring" as const, stiffness: 300, damping:30}},
+  hover: { opacity: 1, scale: 1.03,  transition:{type:"spring" as const, stiffness: 300, damping:30}},
 };
 
 
@@ -201,5 +201,6 @@ time everytime.
 
 
 }
+
 
 
