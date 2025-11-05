@@ -167,7 +167,7 @@ return (
     
     
 
-<div className='sm:p-15 p-3 will-change-transform select-none'>
+<div className='xl:p-15 lg:p-10 md:p-7 sm:p-5 p-3 will-change-transform select-none'>
 
 <motion.div variants={parentSlideVariant} initial = 'hidden' animate = {aboutView ? 'show' : 'hidden'} ref = {aboutRef}>
   <Element name = 'About us'>
