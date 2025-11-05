@@ -82,7 +82,7 @@ return (
   <SmoothScroll/>
   <Element name ='Home'>
     <div className="relative w-full subpixel-antialiased">
-      <video src={landingvideo3} preload="none"  autoPlay loop muted playsInline disablePictureInPicture
+      <video src={landingvideo3}  autoPlay loop muted playsInline disablePictureInPicture
         className="absolute w-full h-full object-cover blur-xs"
       />
     
