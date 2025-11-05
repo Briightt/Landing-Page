@@ -50,7 +50,7 @@ sm:min-w-160" variants = {variants}>
 <h1 className="text-white text-[2.5rem] font-semibold">Partnering With Us</h1>
 <BsPeopleFill className="text-white text-4xl"/>
 </motion.div>
-<motion.h2 className="w-full max-w-120 text-white text-[1.3rem] lg:text-[1.2rem] lg:min-w-150 xl:max-w-120 leading-10 font-light" variants = {variants}>Partnering with a trusted sand company ensures a <span className="font-bold">consistent supply</span> of <span className="font-bold">high-quality, screened</span>,
+<motion.h2 className="w-full max-w-120 text-white text-[1.3rem] lg:text-[1.2rem] lg:min-w-130 xl:max-w-120 leading-10 font-light" variants = {variants}>Partnering with a trusted sand company ensures a <span className="font-bold">consistent supply</span> of <span className="font-bold">high-quality, screened</span>,
      and <span className="font-bold">reliable sand</span> for construction, landscaping, or beach restoration projects. It saves time, reduces costs, 
      and guarantees material that meets industry standards.</motion.h2>
 <motion.div className="flex flex-col gap-2 p-7" variants = {variants}>
@@ -61,7 +61,7 @@ sm:min-w-160" variants = {variants}>
 
 {categories.map((category,index) => 
 <ul className="flex flex-col lg:items-start font-light p-1 text-white gap-3">
-<li  key = {index} className="flex items-center sm:justify-between justify-around gap-5 text-[1.1rem] border-b leading-10 cursor-pointer w-full sm:max-w-130 sm:min-w-130 lg:sm:max-w-100 sm:min-w-100 xl:max-w-130 xl:min-w-130 select-none 
+<li  key = {index} className="flex items-center sm:justify-between justify-around gap-5 text-[1.1rem] border-b leading-10 cursor-pointer w-full sm:max-w-130 sm:min-w-130 lg:sm:max-w-80 sm:min-w-80 xl:max-w-130 xl:min-w-130 select-none 
 transition-all ease-in-out duration-200 hover:opacity-70 "
  onClick={() => collpaseText(index)}><p className="flex items-center gap-5">{icons[index]}{category}</p>
 {collapseIndex === index ? <motion.span animate = {{rotate:180}} transition={{ease:'easeInOut', duration:0.3}} ><AiOutlineMinus className="transition-all ease-in-out duration-200 w-4 h-4"/></motion.span> : 
@@ -108,6 +108,7 @@ transition-all ease-in-out duration-200 hover:opacity-70 "
 
 
 }
+
 
 
 
