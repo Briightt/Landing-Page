@@ -43,14 +43,14 @@ const icons = [<FaHandshake/>, <FaCircleCheck/> , <RiHandCoinFill/>, <AiOutlineR
 return (
 <>
 <motion.div className="flex items-center justify-center" variants = {variants}>
-<motion.div className="flex xl:flex-row flex-col items-center gap-5 lg:gap-10 lg:justify-between xl:justify-around bg-linear-to-t from-[#222831] to-[#000000] 
+<motion.div className="flex xl:flex-row flex-col items-center gap-5 lg:gap-20 lg:justify-between xl:justify-around bg-linear-to-t from-[#222831] to-[#000000] 
 lg:w-full lg:p-10 p-5 mt-10 min-w-90 
 sm:min-w-160" variants = {variants}>
 <motion.div className="flex flex-col items-center lg:gap-4 gap-5" variants = {variants}>
 <h1 className="text-white text-[2.5rem] font-semibold">Partnering With Us</h1>
 <BsPeopleFill className="text-white text-4xl"/>
 </motion.div>
-<motion.h2 className="w-full max-w-120  text-white text-[1.3rem] leading-10 font-light" variants = {variants}>Partnering with a trusted sand company ensures a <span className="font-bold">consistent supply</span> of <span className="font-bold">high-quality, screened</span>,
+<motion.h2 className="w-full max-w-120  text-white text-[1.3rem] lg:text-[1.1rem] leading-10 font-light" variants = {variants}>Partnering with a trusted sand company ensures a <span className="font-bold">consistent supply</span> of <span className="font-bold">high-quality, screened</span>,
      and <span className="font-bold">reliable sand</span> for construction, landscaping, or beach restoration projects. It saves time, reduces costs, 
      and guarantees material that meets industry standards.</motion.h2>
 <motion.div className="flex flex-col gap-2 p-7" variants = {variants}>
@@ -94,6 +94,7 @@ transition-all ease-in-out duration-200 hover:opacity-70 "
 
 </motion.div>
 </>)
+
 
 
 
