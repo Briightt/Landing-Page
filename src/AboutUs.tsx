@@ -96,7 +96,7 @@ the best price.
 </motion.div>
 
 <motion.div className="grid grid-rows-1 [grid-template-areas:'image'] mt-20 justify-center" variants={variants}>
-<img src = {ourapproach} className='sm:w-full min-w-90 lg:w-455 h-60 lg:h-130 object-cover [grid-area:image]'></img>
+<img src = {ourapproach} className='sm:w-full min-w-90 lg:w-455 h-130 lg:h-130 object-cover [grid-area:image]'></img>
 <motion.div className='flex md:flex-row flex-col gap-7 mt-8 text-[#333333] p-5 justify-around [grid-area:image]' variants={variants}>
 <div className='flex items-center mb-5'>
 <h1 className='lg:text-4xl text-3xl font-semibold text-white'>Our Approach</h1>
@@ -201,3 +201,4 @@ time everytime.
 
 
 }
+
