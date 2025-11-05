@@ -87,7 +87,7 @@ return (
       />
     
       <div className="relative flex flex-col min-h-screen">
-        <nav className="fixed top-0 w-full flex items-center sm:justify-between justify-evenly gap-28 md:gap-0 p-3 bg-transparent text-black font-bold z-1000">
+        <nav className="fixed top-0 w-full flex items-center sm:justify-between justify-between gap-28 md:gap-0 p-3 bg-transparent text-black font-bold z-1000">
 <AnimatePresence initial = {false}>
         <button onClick={() =>setMenuDropDown(true)} className='p-1'><BiMenu className='md:text-3xl text-[1.5rem] cursor-pointer transition-all duration-300 ease-in-out hover:opacity-50 text-black 
         '/></button>
