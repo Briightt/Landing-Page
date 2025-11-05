@@ -46,7 +46,7 @@ function App() {
   })
 
    const {ref:aboutRef, inView: aboutView} = useInView({
-    threshold:0.15, triggerOnce:true
+    threshold:0.10, triggerOnce:true
   })
 
    const {ref:fillRef, inView: fillView} = useInView({
