@@ -73,7 +73,7 @@ return (
 </div>
 {contactInfoCategories.map((item,index) => 
 <div key = {index} className="">
-<p className="text-2xl flex items-center sm:justify-center xl:justify-start gap-3">{item}<span className="text-[0.9rem]">{contactIcons[index]}</span></p><span className="text-[1.2rem] font-light md:whitespace-nowrap lg:whitespace-normal">{contactInfo[index]}</span>
+<p className="text-2xl flex items-center justify-center xl:justify-start gap-3">{item}<span className="text-[0.9rem]">{contactIcons[index]}</span></p><span className="text-[1.2rem] font-light md:whitespace-nowrap lg:whitespace-normal">{contactInfo[index]}</span>
 </div>
 )}
 </div>
@@ -81,6 +81,7 @@ return (
 </motion.div>
 </div>
 </>)
+
 
 
 
