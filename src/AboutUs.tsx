@@ -145,7 +145,7 @@ time everytime.
  >
 <motion.div className='flex flex-col'  variants={hoverVariants} initial = 'rest' animate = "rest" whileHover='hover' style={{ transformOrigin: "left center",  willChange: "transform" }}>
 <motion.p className='text-[1.3rem] text-[#00000054]' >{item.number}</motion.p>
-<motion.span className={`lg:text-2xl sm:text-[1.2rem] text-[1.1rem]`} initial = 'rest' whileHover='hover' animate = 'rest' variants={textVariants} onMouseEnter={() => onHover(index)}
+<motion.span className={`lg:text-[1.1rem] sm:text-[1.2rem] text-[1.1rem]`} initial = 'rest' whileHover='hover' animate = 'rest' variants={textVariants} onMouseEnter={() => onHover(index)}
  key = 'content' style={{ transformOrigin: "left center",  willChange: "transform" }} >{item.description}</motion.span>
 </motion.div>
 </motion.div>
@@ -201,6 +201,7 @@ time everytime.
 
 
 }
+
 
 
 
