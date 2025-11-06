@@ -87,7 +87,7 @@ return (
 <motion.div variants={variants}>
 <div className='flex flex-col xl:items-start items-center gap-2 lg:mx-10 mt-10 lg:p-5 lg:gap-0 '>
 <FaFontAwesomeFlag className='lg:w-6 lg:h-6 lg:ml-1 w-5 h-5'/>
-<h1 className='font-bold lg:text-5xl text-3xl mb-5 self-center'>At Loka, our distinctiveness is our USP,</h1>
+<h1 className='font-bold lg:text-5xl text-[1.7rem] mb-5 self-center'>At Loka, our distinctiveness is our USP,</h1>
 <p className='lg:text-[1.25rem] text-base w-full max-w-220 leading-8'>In Loka we don’t simply copy the old school of producing, sourcing, and consulting, taking your inquiry through a complete process ensuring you complete your
 your project with professionalism, top quality, on-time and always with
 the best price.
@@ -201,6 +201,7 @@ time everytime.
 
 
 }
+
 
 
 
