@@ -15,7 +15,7 @@ return(
      commitment to quality, safety, and client satisfaction.
      Our ongoing progress reflects Loka’s capability to handle <span className='font-bold'>large-scale material supply operations</span> with consistency and professionalism. </motion.p>
 
-<motion.img src = {yasisland2} className='md:w-full md:h-full sm:h-70 min-w-90 h-50 mt-7 mb-10 md:mb-0' variants = {variants}></motion.img>
+<motion.img loading = "lazy" src = {yasisland2} className='md:w-full md:h-full sm:h-70 min-w-90 h-50 mt-7 mb-10 md:mb-0' variants = {variants}></motion.img>
 
 </motion.div>
 
@@ -27,6 +27,7 @@ return(
 
 
  )
+
 
 
 
