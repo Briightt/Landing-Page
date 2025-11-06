@@ -87,7 +87,7 @@ return (
 <motion.div variants={variants}>
 <div className='flex flex-col xl:items-start items-center gap-2 lg:mx-10 mt-10 lg:p-5 lg:gap-0 '>
 <FaFontAwesomeFlag className='lg:w-6 lg:h-6 lg:ml-1 w-5 h-5'/>
-<h1 className='font-bold lg:text-5xl text-3xl mb-5'>At Loka, our distinctiveness is our USP,</h1>
+<h1 className='font-bold lg:text-5xl text-3xl mb-5 self-center'>At Loka, our distinctiveness is our USP,</h1>
 <p className='lg:text-[1.25rem] text-base w-full max-w-220 leading-8'>In Loka we don’t simply copy the old school of producing, sourcing, and consulting, taking your inquiry through a complete process ensuring you complete your
 your project with professionalism, top quality, on-time and always with
 the best price.
@@ -161,7 +161,7 @@ time everytime.
 </motion.div>
 </motion.div>
 
-<motion.div className='flex flex-col items-center gap-2  lg:mx-10 mt-20 lg:p-5' variants={variants}>
+<motion.div className='flex flex-col items-center gap-2 lg:mx-10 mt-20 lg:p-5' variants={variants}>
 <MdBeachAccess className='lg:w-6 lg:h-6 h-5 w-5 mr-7 lg:mr-0 '/>
 <h1 className='font-bold lg:text-5xl text-3xl lg:leading-15 mb-7'>Engineering Our Beach Sand For You</h1>
 <p className='lg:text-[1.25rem] text-[1.1rem] w-full md:max-w-130 lg:max-w-170 min-w-70 leading-8'>High-quality, clean, and well-graded sand used in construction projects for concrete, plastering, 
@@ -171,9 +171,9 @@ time everytime.
 
 <motion.div variants={variants} className='flex xl:flex-row flex-col mt-8 text-[#333333] md:p-6 lg:justify-around gap-5 lg:gap-3 items-center'>
 {engineeringObj.map((item, index) => 
-<motion.div className={`w-full max-w-100 sm:max-w-150 xl:min-h-100 xl:max-w-100 font-mono flex flex-col rounded-2xl p-5`} style = {{backgroundColor: `#${enginneringColors[index]}`}} whileHover={{scale:1.05}} transition={{type:'spring', stiffness:300}}>
-<h1 className='text-3xl'>{item.number}</h1>
-<p className='text-[1.1rem] leading-9'>{item.description}</p>
+<motion.div className={`w-full max-w-100 sm:max-w-150 xl:min-h-100 xl:max-w-100 font-serif flex flex-col rounded-2xl p-5`} style = {{backgroundColor: `#${enginneringColors[index]}`}} whileHover={{scale:1.05}} transition={{type:'spring', stiffness:300}}>
+<h1 className='text-4xl'>{item.number}</h1>
+<p className='text-[1.25rem] leading-10'>{item.description}</p>
 </motion.div>
 )}
 </motion.div>
@@ -201,6 +201,7 @@ time everytime.
 
 
 }
+
 
 
 
