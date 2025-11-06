@@ -27,8 +27,8 @@ function App() {
    const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    document.body.title = 'Loka'
     const handleScroll = () => {
-      document.body.title = 'Loka'
       if (window.scrollY > 50) {
         setIsScrolled(true);
       } else {
