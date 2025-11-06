@@ -123,12 +123,12 @@ time everytime.
 
 
 
-<motion.div className='flex xl:flex-row flex-col items-center xl:items-start gap-7 mt-8 text-black p-5 justify-around' variants={variants}>
+<motion.div className='flex xl:flex-row flex-col items-center xl:items-start gap-7 mt-8 p-5 justify-around' variants={variants}>
 {manfactureObj.map((item , index:number) => 
 <div key = {index} className='flex flex-col items-center justify-center gap-4' >
 <img loading = "lazy" src = {item.img} className='md:w-110 md:h-95 min-w-90 h-85 rounded-2xl'></img>
-<h1 className='font-bold text-3xl'>{item.type}</h1>
-<p className='w-full max-w-65 font-light text-shadow-[0px_0px_3px_black] text-[1.21rem]'>{item.text}</p>
+<h1 className='font-bold text-3xl text-blue-400'>{item.type}</h1>
+<p className='w-full max-w-65 font-light text-black text-shadow-[0px_0px_3px_black] text-[1.21rem]'>{item.text}</p>
 </div>
 
 )}
@@ -143,10 +143,10 @@ time everytime.
 {machineryObj.map((item,index) => 
 <motion.div key = {index} className='flex gap-5 cursor-pointer py-5' 
  >
-<motion.div className='flex flex-col'  variants={hoverVariants} initial = 'rest' animate = "rest" whileHover='hover' style={{ transformOrigin: "left center",  willChange: "transform" }}>
+<motion.div className='flex flex-col'  variants={hoverVariants} initial = 'rest' animate = "rest" whileHover='hover' style={{ willChange: "transform" }}>
 <motion.p className='text-[1.3rem] text-[#00000054]' >{item.number}</motion.p>
 <motion.span className={`lg:text-[1.1rem] sm:text-[1.2rem] text-[1.1rem]`} initial = 'rest' whileHover='hover' animate = 'rest' variants={textVariants} onMouseEnter={() => onHover(index)}
- key = 'content' style={{ transformOrigin: "left center",  willChange: "transform" }} >{item.description}</motion.span>
+ key = 'content' style={{willChange: "transform" }} >{item.description}</motion.span>
 </motion.div>
 </motion.div>
 )}
@@ -201,6 +201,7 @@ time everytime.
 
 
 }
+
 
 
 
