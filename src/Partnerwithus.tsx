@@ -77,7 +77,7 @@ transition-all ease-in-out duration-200 hover:opacity-70 "
     exit={{ opacity: 0 }}
     transition={{ duration: 0.7, ease: "easeInOut" }}
                
-><p className="w-full max-w-130">{collapseIndex === index && reasons[index]}</p>
+><p className="w-full sm:max-w-130 xl:max-w-90">{collapseIndex === index && reasons[index]}</p>
 </motion.div>
 )}
 </AnimatePresence>
@@ -108,6 +108,7 @@ transition-all ease-in-out duration-200 hover:opacity-70 "
 
 
 }
+
 
 
 
