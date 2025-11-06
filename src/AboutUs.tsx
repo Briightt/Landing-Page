@@ -85,7 +85,7 @@ const enginneringColors = ['D6A99D','FBF3D5','D6DAC8','9CAFAA']
 return (
 <>
 <motion.div variants={variants}>
-<div className='flex flex-col items-start lg:mx-10 mt-10 lg:p-5 '>
+<div className='flex flex-col xl:items-start items-center gap-2 lg:mx-10 mt-10 lg:p-5 lg:gap-0 '>
 <FaFontAwesomeFlag className='lg:w-6 lg:h-6 lg:ml-1 w-5 h-5'/>
 <h1 className='font-bold lg:text-5xl text-3xl mb-5'>At Loka, our distinctiveness is our USP,</h1>
 <p className='lg:text-[1.25rem] text-base w-full max-w-220 leading-8'>In Loka we don’t simply copy the old school of producing, sourcing, and consulting, taking your inquiry through a complete process ensuring you complete your
@@ -96,7 +96,7 @@ the best price.
 </motion.div>
 
 <motion.div className="grid grid-rows-1 [grid-template-areas:'image'] mt-20 justify-center" variants={variants}>
-<img src = {ourapproach} className='sm:w-full min-w-90 lg:w-455 h-140 lg:h-130 object-cover [grid-area:image]'></img>
+<img loading = "lazy" src = {ourapproach} className='sm:w-full min-w-90 lg:w-455 h-140 lg:h-130 object-cover [grid-area:image]'></img>
 <motion.div className='flex md:flex-row flex-col gap-7 mt-8 text-[#333333] p-5 justify-around [grid-area:image]' variants={variants}>
 <div className='flex items-center mb-5'>
 <h1 className='lg:text-4xl text-3xl font-semibold text-white'>Our Approach</h1>
@@ -110,7 +110,7 @@ Our mission is to craft breathtaking beachfront escapes and waterfront residence
 </motion.div>
 </motion.div>
 
-<motion.div className='flex flex-col xl:items-end items-center lg:mx-10 mt-10 lg:p-5' variants={variants}>
+<motion.div className='flex flex-col xl:items-end items-center gap-2 lg:mx-10 mt-10 lg:p-5 lg:gap-0' variants={variants}>
 <IoConstruct className='lg:w-6 lg:h-6 w-5 h-5'/>
 <h1 className='font-bold lg:text-5xl text-3xl lg:leading-15 mb-2 lg:mb-0'>What we can Source & Manufacture</h1>
 <span className='font-semibold mb-3'>“If you cannot find it or manufacture it… LOKA Will”
@@ -123,10 +123,10 @@ time everytime.
 
 
 
-<motion.div className='flex xl:flex-row flex-col gap-7 mt-8 text-[#333333] p-5 justify-around' variants={variants}>
+<motion.div className='flex xl:flex-row flex-col items-center xl:items-start gap-7 mt-8 text-[#333333] p-5 justify-around' variants={variants}>
 {manfactureObj.map((item , index:number) => 
 <div key = {index} className='flex flex-col items-center justify-center gap-4' >
-<img src = {item.img} className='md:w-110 md:h-95 min-w-90 h-85 rounded-2xl'></img>
+<img loading = "lazy" src = {item.img} className='md:w-110 md:h-95 min-w-90 h-85 rounded-2xl'></img>
 <h1 className='font-semibold text-2xl'>{item.type}</h1>
 <p className='w-full max-w-65'>{item.text}</p>
 </div>
@@ -152,16 +152,16 @@ time everytime.
 )}
 </div>
 <motion.div className='flex flex-col items-center' variants={variants}>
-<img src = {machineryObj[hoverIndex ?? clickIndex].img} className='lg:max-w-190 lg:h-150 sm:max-w-190 sm:h-100 min-w-90 h-60 rounded-2xl mb-3 mt-3 lg:mt-0'></img>
+<img loading = "lazy" src = {machineryObj[hoverIndex ?? clickIndex].img} className='lg:max-w-190 lg:h-150 sm:max-w-190 sm:h-100 min-w-90 h-60 rounded-2xl mb-3 mt-3 lg:mt-0'></img>
 <div className='flex gap-3'>
 {images.map((item,index) => 
-<motion.img src = {item} key = {index} className='w-20 cursor-pointer' onClick = {() => onButtonClick(index)} whileHover={{scale:1.1}} transition={{ease:'easeInOut', duration:0.1}}></motion.img>
+<motion.img loading = "lazy" src = {item} key = {index} className='w-20 cursor-pointer' onClick = {() => onButtonClick(index)} whileHover={{scale:1.1}} transition={{ease:'easeInOut', duration:0.1}}></motion.img>
 )}
 </div>
 </motion.div>
 </motion.div>
 
-<motion.div className='flex flex-col md:items-center lg:mx-10 mt-20 lg:p-5' variants={variants}>
+<motion.div className='flex flex-col items-center gap-2  lg:mx-10 mt-20 lg:p-5' variants={variants}>
 <MdBeachAccess className='lg:w-6 lg:h-6 h-5 w-5 mr-7 lg:mr-0 '/>
 <h1 className='font-bold lg:text-5xl text-3xl lg:leading-15 mb-7'>Engineering Our Beach Sand For You</h1>
 <p className='lg:text-[1.25rem] text-[1.1rem] w-full md:max-w-130 lg:max-w-170 min-w-70 leading-8'>High-quality, clean, and well-graded sand used in construction projects for concrete, plastering, 
@@ -201,6 +201,7 @@ time everytime.
 
 
 }
+
 
 
 
