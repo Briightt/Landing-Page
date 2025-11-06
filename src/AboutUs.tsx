@@ -127,8 +127,8 @@ time everytime.
 {manfactureObj.map((item , index:number) => 
 <div key = {index} className='flex flex-col items-center justify-center gap-4' >
 <img loading = "lazy" src = {item.img} className='md:w-110 md:h-95 min-w-90 h-85 rounded-2xl'></img>
-<h1 className='font-bold text-3xl text-blue-400'>{item.type}</h1>
-<p className='w-full max-w-65 font-light text-black text-shadow-[0px_0px_3px_black] text-[1.21rem]'>{item.text}</p>
+<h1 className='font-semibold text-3xl text-blue-400'>{item.type}</h1>
+<p className='w-full max-w-65 font-light text-black text-shadow-[0px_0px_1px_black] text-[1.21rem]'>{item.text}</p>
 </div>
 
 )}
@@ -201,6 +201,7 @@ time everytime.
 
 
 }
+
 
 
 
