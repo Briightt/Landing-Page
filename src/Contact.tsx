@@ -32,7 +32,7 @@ return (
 <div className="flex flex-col xl:flex-row items-center md:items-start gap-20 xl:justify-around">
 <div className="flex flex-col gap-3">
 <div className="flex flex-col gap-3">
-<h1 className="lg:text-[2.35rem] text-[1.2rem] sm:text-3xl font-semibold" >Prepared to create real impact for you.</h1>
+<h1 className="lg:text-[2.35rem] text-[1.2rem] sm:text-3xl md:text-4xl font-semibold" >Prepared to create real impact for you.</h1>
 <span className="lg:text-[1.25rem] sm:text-[1.1rem] text-base mb-10 flex items-center gap-2 font-normal">Contact Us<BiMessage className="w-3.5 h-3.5"/></span>
 </div>
 
@@ -92,4 +92,5 @@ return (
 
 
 }
+
 
