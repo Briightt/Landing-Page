@@ -171,9 +171,9 @@ time everytime.
 
 <motion.div variants={variants} className='flex xl:flex-row flex-col mt-8 text-[#333333] md:p-6 lg:justify-around gap-5 lg:gap-3 items-center'>
 {engineeringObj.map((item, index) => 
-<motion.div className={`w-full max-w-100 sm:max-w-150 xl:min-h-100 xl:max-w-100 font-serif flex flex-col rounded-2xl p-5`} style = {{backgroundColor: `#${enginneringColors[index]}`}} whileHover={{scale:1.05}} transition={{type:'spring', stiffness:300}}>
-<h1 className='text-4xl'>{item.number}</h1>
-<p className='text-[1.25rem] leading-10'>{item.description}</p>
+<motion.div className={`w-full max-w-100 sm:max-w-150 xl:min-h-100 xl:max-w-100 font-serif flex flex-col rounded-2xl p-5 gap-6`} style = {{backgroundColor: `#${enginneringColors[index]}`}} whileHover={{scale:1.05}} transition={{type:'spring', stiffness:300}}>
+<h1 className='text-5xl'>{item.number}</h1>
+<p className='text-[1.3rem] leading-10'>{item.description}</p>
 </motion.div>
 )}
 </motion.div>
@@ -201,6 +201,7 @@ time everytime.
 
 
 }
+
 
 
 
