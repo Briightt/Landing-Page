@@ -194,7 +194,7 @@ return (
 </Element>
  </motion.div>
 </div>
-
+  <Footer/>
   </>
 );
   
