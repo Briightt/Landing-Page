@@ -27,12 +27,12 @@ const contactInfo = ['+971-501006656', 'mo@lokacbc.com', 'Mohammed Bin Butti Al 
 
 return (
 <>
-<div className="flex items-center justify-center mt-20 p-10">
+<div className="flex items-center justify-center mt-20">
 <motion.div className="lg:max-w-427 xl:w-full min-w-90 bg-linear-30 from-blue-300 to-orange-200 lg:p-15 p-3 overflow-auto" variants={variants}>
 <div className="flex flex-col xl:flex-row items-center md:items-start gap-20 xl:justify-around">
 <div className="flex flex-col gap-3">
 <div className="flex flex-col gap-3">
-<h1 className="lg:text-[2.35rem] text-[1.2rem] sm:text-3xl md:text-4xl font-semibold" >Prepared to create real impact for you.</h1>
+<h1 className="lg:text-[2.35rem] text-[1.2rem] sm:text-3xl md:text-4xl font-semibold mt-10 p-1" >Prepared to create real impact for you.</h1>
 <span className="lg:text-[1.25rem] sm:text-[1.1rem] text-base mb-10 flex items-center gap-2 font-normal">Contact Us<BiMessage className="w-3.5 h-3.5"/></span>
 </div>
 
@@ -92,6 +92,7 @@ return (
 
 
 }
+
 
 
 
