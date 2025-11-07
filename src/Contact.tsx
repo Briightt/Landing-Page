@@ -27,7 +27,7 @@ const contactInfo = ['+971-501006656', 'mo@lokacbc.com', 'Mohammed Bin Butti Al 
 
 return (
 <>
-<div className="flex items-center justify-center mt-20">
+<div className="flex items-center justify-center mt-20 p-10">
 <motion.div className="lg:max-w-427 xl:w-full min-w-90 bg-linear-30 from-blue-300 to-orange-200 lg:p-15 p-3 overflow-auto" variants={variants}>
 <div className="flex flex-col xl:flex-row items-center md:items-start gap-20 xl:justify-around">
 <div className="flex flex-col gap-3">
@@ -92,5 +92,6 @@ return (
 
 
 }
+
 
 
