@@ -152,7 +152,7 @@ time everytime.
 )}
 </div>
 <motion.div className='flex flex-col items-center' variants={variants}>
-<img loading = "lazy" src = {machineryObj[hoverIndex ?? clickIndex].img} className='lg:max-w-150 lg:h-150 sm:max-w-190 sm:h-100 min-w-90 h-60 rounded-2xl mb-3 mt-3 lg:mt-0'></img>
+<img loading = "lazy" src = {machineryObj[hoverIndex ?? clickIndex].img} className='lg:max-w-150 lg:h-100 sm:max-w-190 sm:h-100 min-w-90 h-60 rounded-2xl mb-3 mt-3 lg:mt-0'></img>
 <div className='flex gap-3'>
 {images.map((item,index) => 
 <motion.img loading = "lazy" src = {item} key = {index} className='w-20 cursor-pointer' onClick = {() => onButtonClick(index)} whileHover={{scale:1.1}} transition={{ease:'easeInOut', duration:0.1}}></motion.img>
@@ -201,6 +201,7 @@ time everytime.
 
 
 }
+
 
 
 
