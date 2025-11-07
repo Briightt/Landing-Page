@@ -15,6 +15,7 @@ import Partherwithus from './Partnerwithus'
 import Ourwork from './Ourwork'
 import SmoothScroll from './SmoothScroll'
 import Contact from './Contact'
+import Footer from './Footer
 
 
 
