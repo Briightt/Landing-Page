@@ -1,24 +1,28 @@
-import { useState } from "react";
+
 import { BiMessage } from "react-icons/bi";
 import {motion} from 'framer-motion'
 import {  MdMail, MdOutlineContactSupport } from "react-icons/md";
 import { FaAddressCard, FaPhoneAlt } from "react-icons/fa";
 import type {Variants} from 'framer-motion'
+import {useForm} from 'react-hook-form'
+
+interface Field {
+  firstname:string,
+  lastname?:string,
+  phone:number,
+  email:string,
+  message:string
+}
 
 export default function Contact({variants}:{variants:Variants}) {
 
-const [field,setField] = useState<{firstname:string,lastname:string, phone:string, email:string,message:string}>({
-    firstname:'',
-    lastname:'',
-    phone:'',
-    email:'',
-    message:'',
-})
 
-const handleField = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
-setField(prev => ({...prev, [e.target.name]: e.target.value}))
+const {register, handleSubmit, formState:{errors} } = useForm<Field>()
+
+const submitForm = (data:Field) => {
+console.log(data)
 }
-
+ 
 
 const contactInfoCategories = ['Phone', 'Email','Address']
 const contactIcons = [<FaPhoneAlt/>, <MdMail/>, <FaAddressCard/> ]
@@ -37,29 +41,40 @@ return (
 </div>
 
 <div className="flex flex-col sm:flex-row gap-10 mb-10">
+<div className="flex flex-col">
 <input className='w-full sm:min-w-70 focus:outline-0 focus:border-b-2 focus:border-b-lime-300 placeholder:text-black text-[1.2rem]
  border-b leading-9 
   focus:placeholder:scale-65 focus:placeholder:-translate-y-3 
-  focus:placeholder:-translate-x-11 focus:placeholder:opacity-60 focus:placeholder:transition-all duration-400' placeholder="First Name*" name = 'firstname' value = {field.firstname} onChange = {handleField} ></input>
+  focus:placeholder:-translate-x-11 focus:placeholder:opacity-60 focus:placeholder:transition-all duration-400' placeholder="First Name*" type = 'text'  {...register('firstname', {required:'Your First Name is Required'})}></input> 
+  {errors.firstname && <p className="text-red-500 text-[0.9rem]">{errors.firstname.message}</p>}
+</div>
+<div className="flex flex-col">
 <input className='w-full sm:min-w-70  focus:outline-0 focus:border-b-2 focus:border-b-lime-400 placeholder:text-black text-[1.2rem] border-b leading-9
  focus:placeholder:scale-65 focus:placeholder:-translate-y-3 focus:placeholder:-translate-x-11 focus:placeholder:opacity-60 focus:placeholder:transition-all duration-400
-' placeholder="Last Name*" name = 'lastname' value = {field.lastname} onChange = {handleField} ></input>
+' placeholder="Last Name*" type = 'text'   {...register('lastname', {required:false})}></input>
+</div>
 </div>
 
 <div className="flex flex-col sm:flex-row  gap-10">
-<input className='w-full sm:min-w-70 focus:outline-0 focus:border-b-2 focus:border-b-lime-400 placeholder:text-black text-[1.2rem] border-b leading-9 focus:placeholder:scale-65 focus:placeholder:-translate-y-3 focus:placeholder:-translate-x-11 focus:placeholder:opacity-60 focus:placeholder:transition-all duration-400' placeholder="Phone*" name = 'phone' value = {field.phone} onChange = {handleField} ></input>
+<div className="flex flex-col">
+<input className='w-full sm:min-w-70 focus:outline-0 focus:border-b-2 focus:border-b-lime-400 placeholder:text-black text-[1.2rem] border-b leading-9 focus:placeholder:scale-65 focus:placeholder:-translate-y-3 focus:placeholder:-translate-x-11 focus:placeholder:opacity-60 focus:placeholder:transition-all duration-400' placeholder="Phone*" type = 'tel' {...register('phone', {required:'Your Phone Number is Required'})}></input>
+ {errors.phone && <p className="text-red-500 text-[0.9rem]">{errors.phone.message}</p>}
+ </div>
+<div className="flex flex-col">
 <input className='w-full sm:min-w-70 focus:outline-0 focus:border-b-2 focus:border-b-lime-400
  placeholder:text-black text-[1.2rem] border-b leading-9 focus:placeholder:scale-65 focus:placeholder:-translate-y-3
-  focus:placeholder:-translate-x-11 focus:placeholder:opacity-60 focus:placeholder:transition-all duration-400' placeholder="Email Address*" name = 'email' value = {field.email} onChange = {handleField} ></input>
+  focus:placeholder:-translate-x-11 focus:placeholder:opacity-60 focus:placeholder:transition-all duration-400' placeholder="Email Address*" type = 'email' {...register('email', {required:'Your Email is Required'})}></input>
+  {errors.email && <p className="text-red-500 text-[0.9rem]">{errors.email.message}</p>}
+  </div>
 </div>
 
 <textarea className='focus:outline-0 focus:border-b-2 focus:border-b-lime-400
  placeholder:text-black text-[1.2rem] border-b leading-8 focus:placeholder:scale-65 focus:placeholder:-translate-y-3
   focus:placeholder:-translate-x-26 focus:placeholder:opacity-60 focus:placeholder:transition-all duration-400 mt-10'  placeholder="Leave A Message..."
-  name = 'message' value = {field.message} onChange = {handleField}>
-
+{...register('message', {required:'Please Leave A Message!'})} >
   </textarea>
-<motion.button className="flex items-center justify-center p-2.5 w-full bg-black text-white rounded-2xl cursor-pointer mt-10 text-base mb-10 lg:mb-0" whileHover={{scale:1.03, opacity:0.6}} whileTap={{scale:0.90}}>Submit</motion.button>
+  {errors.message && <p className="text-red-500 text-[0.9rem]">{errors.message.message}</p>}
+<motion.button className="flex items-center justify-center p-2.5 w-full bg-black text-white rounded-2xl cursor-pointer mt-10 text-base mb-10 lg:mb-0" whileHover={{scale:1.03, opacity:0.6}} whileTap={{scale:0.90}} onClick={handleSubmit(submitForm)}>Submit</motion.button>
 
 
 </div>
