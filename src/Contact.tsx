@@ -20,7 +20,7 @@ export default function Contact({variants}:{variants:Variants}) {
 const {register, handleSubmit, formState:{errors} } = useForm<Field>()
 
 const submitForm = (data:Field) => {
-console.log(data)
+return data;
 }
  
 
@@ -107,6 +107,7 @@ return (
 
 
 }
+
 
 
 
