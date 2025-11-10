@@ -89,32 +89,11 @@ return (
     
       <div className="relative flex flex-col min-h-screen">
         <nav className="fixed top-0 w-full flex items-center sm:justify-between justify-between gap-28 md:gap-0 p-3 bg-transparent text-black font-bold z-1000">
-<AnimatePresence initial = {false}>
+
         <button onClick={() =>setMenuDropDown(true)} className='p-1'><BiMenu className='md:text-3xl text-[1.5rem] cursor-pointer transition-all duration-300 ease-in-out hover:opacity-50 text-black 
         '/></button>
           
-          {menuDropDown && 
-          <motion.div className='flex flex-col z-1 bg-[#ffffff] fixed w-full md:max-w-85 max-w-95 top-0 left-0 font-medium text-[1.3rem] h-full max-h-125 gap-6 justify-between 
-           will-change-transform'
-          key = 'content' initial = {{ opacity:0}} animate = {{opacity:1}} exit = {{opacity:1}} transition={{type:'tween' , ease:'easeInOut', duration:0.6}}>
-            <div className='flex flex-col gap-5 p-3'>
-            <div className='flex justify-between items-center p-1 mb-2'>
-            <h1 className='text-3xl '>Menu</h1>
-            <button className='flex justify-end cursor-pointer' onClick={() =>setMenuDropDown(false)}><CgClose></CgClose></button>
-            </div>
-            {['Home', 'About us','Partner With Us','Our work', 'Contact'].map((item) => 
-            <Link to = {item} smooth = {true} duration={700}><motion.li className='border-b list-none  border-[#3333335e] w-full max-w-65 leading-9 cursor-pointer text-[1.1rem]' whileHover={{opacity:0.6}} whileTap = {{scale:0.95}}>{item}</motion.li></Link>
-            
-            )}
-            </div>
-            <div className='flex items-center justify-center gap-5 mt-5 bg-[#333333] text-white p-4'>
-          <BsTwitterX className='w-6 h-6 cursor-pointer'/><FaFacebookF className='w-6 h-6 cursor-pointer'/><BsInstagram className='w-6 h-6 cursor-pointer'/>
-            </div>
-  
-            </motion.div>}
-            
-            </AnimatePresence>
-
+ 
            <img src = {logo} className={`md:w-22 w-17 ${isScrolled ? 'opacity-0 scale-75' : 'opacity-100 scale-100'} transition-all ease-in-out duration-300`}  ></img>
             <Link to = 'Contact' duration={800} smooth = {true}>
             <button 
@@ -122,7 +101,25 @@ return (
               </Link>
         </nav>
 
-      
+         <AnimatePresence mode = 'wait'>
+          {menuDropDown && 
+          <motion.div className='flex flex-col text-neutral-200 z-1000 bg-neutral-800 fixed w-full md:max-w-85 max-w-95 top-0 left-0 font-medium text-[1.3rem] h-full p-12 gap-6 justify-between
+           will-change-transform'
+          key = 'content' initial = {{opacity:0,x:'-100%',  clipPath: 'inset(0 100% 0 0 round 2rem)' , borderRadius: '2rem'}}
+          animate = {{opacity:[0.2,0.4,0.6,1], x:'0%', clipPath: 'inset(0 0% 0 0 round 0rem)', borderRadius:'0rem'}} exit = {{opacity:1,x:'-100%', clipPath: 'inset(0 100% 0 0 round 2rem)',borderRadius: '2rem'  }}
+           transition={{ type: "spring", stiffness: 95, damping: 20, mass: 0.3, opacity: { duration: 0.3 }}}>
+            <div className='flex flex-col gap-6 mt-7 '>
+           <button className='cursor-pointer bg-blue-500 rounded-full p-3 self-end ' onClick={() =>setMenuDropDown(false)}><CgClose className='text-base rounded-full'></CgClose></button>
+            <h1 className='text-base xl w-full font-light border-b border-b-[#ffffff41] leading-10'>Menu</h1>
+            {['Home', 'About us','Partner With Us','Our work', 'Contact'].map((item) => 
+            <Link to = {item} smooth = {true} duration={700}><motion.li className=' list-none w-full max-w-65 leading-9 cursor-pointer text-[1.5rem]' whileHover={{opacity:0.6}} whileTap = {{scale:0.95}}>{item}</motion.li></Link>
+            )}
+            </div>
+            <div className='flex items-center justify-center gap-5 p-9 text-white'>
+          <BsTwitterX className='w-6 h-6 cursor-pointer'/><FaFacebookF className='w-6 h-6 cursor-pointer'/><BsInstagram className='w-6 h-6 cursor-pointer'/>
+            </div>
+            </motion.div>}
+             </AnimatePresence>
         
 
     <motion.div ref = {homeRef} variants={parentSlideVariant} initial = 'hidden' animate = {homeView ? 'show' : 'hidden'} className='flex grow' >
